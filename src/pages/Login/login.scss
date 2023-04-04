@@ -1,0 +1,52 @@
+.form-wrapper {
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        width: 400px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 2rem 3rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        border-radius: 0.5rem;
+
+        input {
+            border: 1px solid #ccd7e6;
+            border-radius: 3px;
+            color: #706f7b;
+            font-size: 1rem;
+            font-weight: 400;
+            outline: none;
+            padding: 1rem 1.3rem;
+        }
+
+        .forgot-password-link {
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            text-align: end;
+        }
+
+        button {
+            padding: 1rem;
+            font-size: 1rem;
+            background-color: #3A5BC5;
+            border: 1px solid #3a5bc5;
+            color: white;
+            box-shadow: 0 10px 15px rgba(58, 91, 197, .35);
+            cursor: pointer;
+            transition: 0.3s all;
+
+            &:hover {
+                box-shadow: 0 10px 15px rgba(58, 91, 197, .55);
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}

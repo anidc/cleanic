@@ -1,0 +1,48 @@
+.update-profile {
+    height: auto;
+    max-width: 70%;
+    margin: auto;
+
+    form {
+        margin: 0 auto;
+        width: 100%;
+
+        .info-fields {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .left-side,
+            .right-side,
+            .mid-side {
+                display: flex;
+                flex-direction: column;
+                width: 32%;
+            }
+
+            input {
+                margin-top: 0 !important;
+                margin-bottom: 1rem;
+
+            }
+
+            select {
+                border: 1px solid #ccd7e6;
+                border-radius: 3px;
+                color: #706f7b;
+                font-size: 1rem;
+                font-weight: 400;
+                outline: none;
+                padding: 1rem 1.3rem;
+                margin-bottom: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+::placeholder {
+    color: #706f7b;
+    opacity: 0.5;
+}
