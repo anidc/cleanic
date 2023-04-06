@@ -9,15 +9,21 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
     // box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);
 
     .logo-div {
-        color: #3A5BC5;
         font-weight: 900;
         font-size: 2rem;
 
-        span {
-            color: #333;
+        .logo-link {
+            cursor: pointer;
+            color: #3A5BC5;
+            text-decoration: none;
+
+            span {
+                color: #333;
+            }
         }
     }
 

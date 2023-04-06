@@ -3,6 +3,12 @@ $blue1: #3A5BC5;
 $blue2: #0DADF2;
 $blue3: #0FBEEC;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;

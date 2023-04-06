@@ -39,10 +39,10 @@ const UpdateProfile = () => {
         const res = await getDoc(ref)
 
         if (!res.exists()) return
-        const { name, surname, location, price } = res.data()
+        const { name, surname, location, price, gender } = res.data()
 
         setSelected(location);
-        if (name && surname) setUser({ name, surname, location, price })
+        if (name && surname) setUser({ name, surname, location, price, gender })
     }
 
     useEffect(() => {
@@ -69,7 +69,7 @@ const UpdateProfile = () => {
             promises.push(updatePassword(passwordRef.current.value))
         }
         if (nameRef.current.value || surnameRef.current.value) {
-            promises.push(updateUser({ name: nameRef.current.value, surname: surnameRef.current.value, price: priceRef.current.value, location: locationRef.current.value }))
+            promises.push(updateUser({ name: nameRef.current.value, surname: surnameRef.current.value, price: priceRef.current.value, location: locationRef.current.value, gender: genderRef.current.value }))
         }
 
         Promise.all(promises)
@@ -107,7 +107,7 @@ const UpdateProfile = () => {
                             <select defaultValue={user && user.gender} ref={genderRef}>
                                 <option disabled selected>Odaberite pol</option>
                                 <option value="Muško">Muško</option>
-                                <option value="Zensko">Zensko</option>
+                                <option value="Žensko">Žensko</option>
                             </select>
                         </div>
                         <div className="mid-side">
