@@ -4,12 +4,12 @@
     .profile-wrapper {
         width: 70%;
         margin: auto;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 
         .gradient-profile {
-            border-radius: 1rem 1rem 0 0;
+            border-radius: 0.5rem 0.5rem 0 0;
             height: 12rem;
             width: 100%;
             background: rgb(58, 91, 197);
@@ -42,12 +42,78 @@
                         object-fit: cover;
                     }
                 }
+
+                .profile-info {
+                    h3 {
+                        margin-top: 1rem;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        margin: 0.5rem;
+
+
+                    }
+                }
+            }
+
+            .mid-profile {
+                width: 50%;
+
+                h3 {
+                    font-weight: 500;
+                }
             }
 
             .right-profile {
                 display: flex;
+                flex-direction: column;
                 justify-content: end;
                 align-items: end;
+                width: 200px;
+
+                .update-profile {
+                    text-decoration: none;
+                    text-align: center;
+                    padding: 0.5rem 1rem;
+                    margin: 0;
+                    font-size: 14px;
+                    background-color: #fff;
+                    border: 1px solid #18bd1277;
+                    border-radius: 0.5rem;
+                    color: #18bd12;
+                    width: 120%;
+                    // box-shadow: 0 10px 15px #84202A59;
+                    cursor: pointer;
+                    transition: 0.5s all;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: #18bd12a2;
+                        // box-shadow: 0 10px 15px #18bd1262;
+                    }
+                }
+
+                button {
+                    margin-top: 0.5rem;
+                    padding: 0.5rem 1rem;
+                    font-size: 14px;
+                    background-color: #fff;
+                    border: 1px solid #d10015;
+                    border-radius: 0.5rem;
+                    color: #d10015;
+                    // box-shadow: 0 10px 15px #84202A59;
+                    cursor: pointer;
+                    transition: 0.5s all;
+                    width: 70%;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: #d10015;
+                        box-shadow: 0 10px 15px #d1001562;
+                    }
+                }
             }
         }
     }

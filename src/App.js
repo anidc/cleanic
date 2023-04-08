@@ -25,11 +25,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/update-profile" element={<UpdateProfile />} />
-          <Route path="/profile" element={
-            // <PrivateRoute element={
-            <Profile />
-            // } />
-          } />
+          <Route path="/profile/:uid" element={<Profile />} />
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

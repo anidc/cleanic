@@ -61,7 +61,10 @@ const Search = () => {
 
             {loading ? (
                 <div className="card-wrapper loading">
-                    <p>Učitavanje...</p>
+                    <p>Učitavanje... </p>
+                    <div className="spinner">
+
+                    </div>
                 </div>
             ) : (
                 <div className="card-wrapper">

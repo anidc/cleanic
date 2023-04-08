@@ -1,4 +1,3 @@
-import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 import "firebase/compat/firestore"
 import { doc, getDoc } from "firebase/firestore"
@@ -77,7 +76,7 @@ const UpdateProfile = () => {
                 setError("")
                 setSuccess("Uspješno ste izmijenili informacije!")
                 setTimeout(() => {
-                    navigate("/profile")
+                    navigate("/profile/" + currentUser.uid)
                 }, 200);
             })
             .catch((error) => {
@@ -137,7 +136,7 @@ const UpdateProfile = () => {
                         </div>
                     </div>
                     <button type="submit" disabled={loading}>Završi</button>
-                    <p><Link to="/profile">Cancel</Link>
+                    <p><Link to={"/profile/" + currentUser.uid}>Cancel</Link>
                     </p>
                 </form>
             </div>

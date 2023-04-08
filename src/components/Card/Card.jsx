@@ -1,9 +1,10 @@
 import "./card.scss"
 import image from "../../images/profile-pic.jpg"
+import { Link } from "react-router-dom";
 
 const Card = ({ user }) => {
     return (
-        <div className="card">
+        <Link className="card" to={"/profile/" + user.id}>
             <div className="image-side">
                 <img src={image} alt="" />
             </div>
@@ -14,7 +15,7 @@ const Card = ({ user }) => {
                     <p className="price">{user.price}KM/<span>m2</span></p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
