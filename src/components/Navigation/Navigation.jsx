@@ -14,7 +14,7 @@ const Navigation = () => {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/search">Cleanic-eri</Link></li>
                     <li>Ko smo mi?</li>
-                    {currentUser && <li> <Link to="/profile">Profil</Link></li>}
+                    {currentUser && <li> <Link to={"/profile/" + currentUser.uid}>Profil</Link></li>}
                     {!currentUser && <li><Link to="/login">Prijavi se</Link></li>}
                     {!currentUser && <li><Link to="/signup">Regisutruj se</Link></li>}
                 </ul>
