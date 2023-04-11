@@ -61,14 +61,16 @@ const UpdateProfile = () => {
         }
 
         const promises = []
-        if (emailRef.current.value !== currentUser.email) {
-            promises.push(updateEmail(emailRef.current.value))
-        }
-        if (passwordRef.current.value) {
-            promises.push(updatePassword(passwordRef.current.value))
-        }
         if (nameRef.current.value || surnameRef.current.value) {
-            promises.push(updateUser({ name: nameRef.current.value, surname: surnameRef.current.value, price: priceRef.current.value, location: locationRef.current.value, gender: genderRef.current.value }))
+            promises.push(updateUser({
+                name: nameRef.current.value,
+                surname: surnameRef.current.value,
+                price: Number(priceRef.current.value),
+                location: locationRef.current.value,
+                gender: genderRef.current.value
+            },
+                passwordRef.current.value,
+                emailRef.current.value))
         }
 
         Promise.all(promises)
@@ -104,9 +106,9 @@ const UpdateProfile = () => {
                             <input type="text" required defaultValue={user && user.surname} ref={surnameRef} />
                             <label htmlFor="name">Spol</label>
                             <select defaultValue={user && user.gender} ref={genderRef}>
-                                <option disabled selected>Odaberite pol</option>
-                                <option value="Muško">Muško</option>
-                                <option value="Žensko">Žensko</option>
+                                <option disabled selected={"" === user?.gender}>Odaberite pol</option>
+                                <option value="Muško" selected={"Muško" === user?.gender}>Muško</option>
+                                <option value="Žensko" selected={"Žensko" === user?.gender}>Žensko</option>
                             </select>
                         </div>
                         <div className="mid-side">

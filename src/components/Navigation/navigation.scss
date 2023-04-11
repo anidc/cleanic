@@ -10,16 +10,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    // box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);
 
     .logo-div {
         font-weight: 900;
         font-size: 2rem;
+        display: flex;
+        align-items: center;
 
         .logo-link {
             cursor: pointer;
             color: #3A5BC5;
             text-decoration: none;
+            margin-right: 2rem;
 
             span {
                 color: #333;
@@ -30,9 +32,46 @@ nav {
     .nav-links ul {
         list-style: none;
         display: inline-flex;
+        font-size: 1rem;
+        font-weight: 400;
 
         li {
-            padding: 20px;
+            padding: 10px 15px;
+            margin: 7px 0;
+            position: relative;
+        }
+
+        .link {
+            text-decoration: none;
+            color: #333;
+            transition: 0.5s all;
+
+            &:hover {
+                color: #3A5BC5;
+            }
+        }
+
+        .link-auth {
+            margin: 7px;
+
+            &:hover {
+                color: #333;
+            }
+        }
+
+        .registration {
+            background-color: #3A5BC5;
+            border-radius: 10px;
+            transition: 0.3s all;
+            margin-left: 0;
+
+            .link {
+                color: #fff;
+            }
+
+            &:hover {
+                background-color: lighten($color: #3A5BC5, $amount: 10);
+            }
         }
     }
 }
