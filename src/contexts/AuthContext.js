@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, updateProfile } from "firebase/auth"
+import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, updateEmail, updatePassword, updateProfile } from "firebase/auth"
 import React, { useContext, useEffect, useState } from "react"
 import { auth, db } from "../firebase"
 import { doc, setDoc } from "firebase/firestore"
@@ -49,18 +49,21 @@ export function AuthProvider({ children }) {
         return sendPasswordResetEmail(auth, email)
     }
 
-    function updateEmail(email) {
-        return updateEmail(auth, email)
-    }
-
-    function updateUser(userData) {
+    function updateUser(userData, password, email) {
         const userDoc = doc(db, "Users", auth.currentUser?.uid)
         setDoc(userDoc, userData)
 
-    }
+        const user = auth.currentUser
 
-    function updatePassword(password) {
-        return updatePassword(auth, password)
+        if (email && email !== user.email) {
+            updateEmail(user, email)
+                .catch(err => console.log(err.message))
+        }
+
+        if (password) {
+            updatePassword(user, password)
+                .catch(err => console.log(err.message))
+        }
     }
 
     useEffect(() => {
@@ -77,8 +80,6 @@ export function AuthProvider({ children }) {
         login,
         logout,
         resetPassword,
-        updateEmail,
-        updatePassword,
         updateUser
     }
 

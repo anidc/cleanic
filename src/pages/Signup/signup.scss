@@ -24,12 +24,22 @@
             outline: none;
             padding: 1rem 1.3rem;
             margin-top: 1rem;
+        }
 
-
+        select {
+            border: 1px solid #ccd7e6;
+            border-radius: 3px;
+            color: #52525a;
+            font-size: 1rem;
+            font-weight: 400;
+            outline: none;
+            padding: 1rem 1.3rem;
+            margin-top: 1rem;
         }
 
         button {
             padding: 1rem;
+            margin: 1rem 0;
             font-size: 1rem;
             background-color: #3A5BC5;
             border: 1px solid #3a5bc5;
