@@ -12,7 +12,7 @@ const Navigation = () => {
                     <ul>
                         <li><Link className="link" to="/">Home</Link></li>
                         <li><Link className="link" to="/search">Cleanic-eri</Link></li>
-                        <li>Ko smo mi?</li>
+                        <li><Link className="link" to="/about-us">Ko smo mi?</Link></li>
                     </ul>
                 </div>
             </div>

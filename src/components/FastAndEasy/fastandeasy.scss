@@ -1,0 +1,34 @@
+.fast-and-easy {
+    text-align: center;
+    color: #010103;
+
+    .fast-easy-subheading {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .fast-easy-heading {
+        margin: 1rem 0 2.5rem;
+        font-size: 2.5rem;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-evenly;
+
+        .card-step {
+            width: 250px;
+
+            .fast-easy-card-heading {
+                font-size: 1.3rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                color: #010103;
+            }
+
+            .fast-easy-card-text {
+                color: #706f7b;
+            }
+        }
+    }
+}

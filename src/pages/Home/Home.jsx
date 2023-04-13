@@ -1,5 +1,6 @@
 import "./home.scss"
 import image from "../../images/zena-naslovna.png"
+import FastAndEasy from "../../components/FastAndEasy/FastAndEasy";
 const Home = () => {
     return (
         <>
@@ -7,6 +8,7 @@ const Home = () => {
                 <div className="left-main">
                     <h3>Pronađite već danas</h3>
                     <h1>Potrebno vam je pospremiti stan a nemate vremena?</h1>
+                    <p>Bez obzira trebate li redovno održavanje, ili temeljito čišćenje nakon velikog događaja, naši stručnaci su tu da pruže besprijekornu uslugu.</p>
                     <p>Naši Cleaniceri će vaš dom ili poslovni prostor vratiti na fabričke postavke!</p>
                 </div>
                 <div className="right-main">
@@ -14,7 +16,7 @@ const Home = () => {
                 </div>
             </main>
 
-            <div className="book-cleanic">
+            {/* <div className="book-cleanic">
                 <h3>Unajmi Cleanicera</h3>
                 <div className="book-content">
                     <div className="cleanicer-city">
@@ -37,8 +39,8 @@ const Home = () => {
                     </div>
                     <button>Pretraži</button>
                 </div>
-            </div>
-
+            </div> */}
+            <FastAndEasy />
         </>
     )
 }
