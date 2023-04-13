@@ -1,0 +1,109 @@
+.image-wrapper {
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+    margin-top: -100px;
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30rem;
+        background-image: url("../../images/disinfecting-home.jpg");
+        background-size: cover;
+        z-index: -2;
+    }
+
+    .image-overlay2 {
+        background-color: hsla(0, 0%, 100%, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30rem;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+
+        .image-heading {
+            font-size: 3rem;
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
+
+
+.aboutus-wrapper {
+    width: 70%;
+    margin: 5rem auto;
+
+    .aboutus-top {
+        display: flex;
+        justify-content: center;
+
+        .aboutus-text {
+            width: 500px;
+            margin-top: .5rem;
+            margin: 0 1rem;
+
+            .aboutus-text-subheading {
+                font-weight: 600;
+            }
+
+            .aboutus-text-heading {
+                font-size: 2.1rem;
+                margin-bottom: 2rem;
+            }
+
+            .aboutus-paragraph {
+                color: #706f7b;
+                margin-bottom: 1rem;
+            }
+
+            .aboutus-icons-container {
+                display: flex;
+                justify-content: space-between;
+                margin: 2rem 0;
+
+                .aboutus-icon-box {
+                    width: 32%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    .aboutus-icon {
+                        border-radius: 50%;
+                        width: 100px;
+                    }
+
+                    .aboutus-icon-number {
+                        font-size: 2rem;
+                    }
+
+                    .aboutus-icon-text {
+                        font-size: 0.7rem;
+                        color: #706f7b;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutus-image-container {
+        max-width: 500px;
+        height: 500px;
+        overflow: hidden;
+        margin: 0 1rem;
+        margin-top: 3rem;
+
+        .aboutus-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
