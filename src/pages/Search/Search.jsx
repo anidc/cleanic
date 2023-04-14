@@ -7,7 +7,6 @@ import "./search.scss"
 const Search = () => {
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(true)
-    const [loading2, setLoading2] = useState(false)
     const [gradovi, setGradovi] = useState([])
     const locationRef = useRef()
     const genderRef = useRef()
@@ -23,8 +22,6 @@ const Search = () => {
 
     const getUsers = async (e, lastDoc) => {
         if (e) e.preventDefault()
-
-        setLoading2(true)
 
         let q = collection(db, "Users");
 
@@ -60,7 +57,6 @@ const Search = () => {
         }
         setLastDoc(querySnapshot.docs[querySnapshot.docs.length - 1])
         setLoading(false)
-        setLoading2(false)
     }
 
     useEffect(() => {
@@ -140,12 +136,6 @@ const Search = () => {
                         ) : (
                             <div className="card-wrapper empty-message">
                                 <p>Nema rezultata pretrage.</p>
-                            </div>
-                        )}
-
-                        {loading2 && (
-                            <div className="card-wrapper loading2">
-                                <div className="spinner"></div>
                             </div>
                         )}
                     </div>
