@@ -2,95 +2,117 @@
     width: 85%;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
     min-height: calc(100vh - 100px);
 
-    .filters {
-        width: 300px;
-        background-color: #fff;
+    .search-sort {
         display: flex;
+        margin: 1rem 320px;
         flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-        border-radius: 0.5rem;
-
-        h2 {
-            font-weight: 900;
-            color: #333;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        select {
-            border: 1px solid #ccd7e6;
-            border-radius: 3px;
-            color: #706f7b;
-            font-size: 1rem;
-            font-weight: 400;
-            outline: none;
-            padding: 1rem 1.3rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button {
-            padding: 1rem;
-            font-size: 1rem;
-            background-color: #3A5BC5;
-            border: 1px solid #3a5bc5;
-            color: white;
-            box-shadow: 0 10px 15px rgba(58, 91, 197, .35);
-            cursor: pointer;
-            transition: 0.3s all;
-            width: 50%;
-
-            &:hover {
-                box-shadow: 0 10px 15px rgba(58, 91, 197, .55);
-            }
-        }
-    }
-
-
-
-    .card-wrapper.loading {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        height: calc(100vh - 100px);
+        align-items: flex-start;
 
-        p {
-            margin-right: 20px;
-        }
-
-        .spinner {
-
-            width: 64px;
-            height: 64px;
-            border: 8px solid;
-            border-color: #3d5af1 transparent #3d5af1 transparent;
-            border-radius: 50%;
-            animation: spin 1.2s linear infinite;
+        select[name="priceOrder"] {
+            border: 1px solid #3A5BC5;
+            border-radius: 10px;
+            padding: 0.5rem;
+            color: #3A5BC5;
+            cursor: pointer;
 
         }
     }
 
-    .card-wrapper {
-        width: 80%;
-        margin: 0 auto;
+    .search-content {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: wrap;
 
-        .empty-message {
-            height: calc(100vh - 100px);
+        .filters {
+            width: 300px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            border-radius: 0.5rem;
+
+            h2 {
+                font-weight: 900;
+                color: #333;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            select {
+                border: 1px solid #ccd7e6;
+                border-radius: 3px;
+                color: #706f7b;
+                font-size: 1rem;
+                font-weight: 400;
+                outline: none;
+                padding: 1rem 1.3rem;
+                margin-bottom: 1rem;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            button {
+                padding: 1rem;
+                font-size: 1rem;
+                background-color: #3A5BC5;
+                border: 1px solid #3a5bc5;
+                color: white;
+                box-shadow: 0 10px 15px rgba(58, 91, 197, .35);
+                cursor: pointer;
+                transition: 0.3s all;
+                width: 50%;
+
+                &:hover {
+                    box-shadow: 0 10px 15px rgba(58, 91, 197, .55);
+                }
+            }
+        }
+
+
+
+        .card-wrapper.loading {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: calc(100vh - 100px);
+
+            p {
+                margin-right: 20px;
+            }
+
+            .spinner {
+
+                width: 64px;
+                height: 64px;
+                border: 8px solid;
+                border-color: #3d5af1 transparent #3d5af1 transparent;
+                border-radius: 50%;
+                animation: spin 1.2s linear infinite;
+
+            }
+        }
+
+        .card-wrapper {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .empty-message {
+                height: calc(100vh - 100px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }
