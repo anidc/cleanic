@@ -1,6 +1,88 @@
 footer {
-    background-color: #333;
+    background-color: #fff;
     width: 100%;
+    // margin-top: 2rem;
+    // border-top: 1px solid black;
+
+    .footer-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3rem auto;
+        width: 1000px;
+
+        .footer-content.logo-quote {
+            width: 500px;
+
+            .footer-logo {
+                font-size: 2rem;
+                font-weight: 900;
+                color: #3a5bc5;
+
+                span {
+                    color: #010103;
+                }
+            }
+
+            .footer-quote {
+                color: #706f7b;
+
+            }
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.7;
+
+            .footer-content-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            .footer-link {
+                text-decoration: none;
+                color: #010103;
+
+                &:hover {
+                    color: #3a5bc5;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        height: 50px;
+        background-color: #f8f8f8;
+        color: #706f7b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.above-footer-section {
+    margin-top: 3rem;
+    background-color: #2d2d2d;
     height: 200px;
-    margin-top: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.mirror-svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0.1;
+    z-index: -3;
 }

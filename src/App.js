@@ -7,7 +7,6 @@ import Navigation from './components/Navigation/Navigation';
 import Signup from './pages/Signup/Signup';
 import { AuthProvider } from './contexts/AuthContext';
 import Profile from './pages/Profile/Profile';
-import PrivateRoute from './components/PrivateRoute';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import Footer from './components/Footer/Footer';
