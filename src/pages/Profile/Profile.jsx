@@ -52,22 +52,21 @@ const Profile = () => {
                             <h3>{user?.name} {user?.surname}</h3>
                             <p>{user?.location}</p>
                             <p>Cijena po m2: <strong>{user?.price}KM</strong></p>
-                            {user && user.phone ? (
-                                <p>Telefon: {user.phone}</p>
-                            ) : (
-                                <p>Telefon: Nije unešen!</p>
-                            )
-                            }
                         </div>
                     </div>
                     <div className="mid-profile">
                         <h3>O korisniku:</h3>
+                        {user && user.phone ? (
+                            <p className="phone-number">Telefon: {user.phone}</p>
+                        ) : (
+                            <p className="phone-number">Telefon: Nije unešen!</p>
+                        )
+                        }
                         {
                             user && user.about ? (
                                 <p>blabla</p>
                             ) : (
                                 <>
-                                    <br />
                                     <p>Korisnik nije unio više o sebi!</p>
                                 </>
                             )
@@ -77,7 +76,7 @@ const Profile = () => {
                         {
                             currentUser && uid === currentUser.uid ?
                                 <>
-                                    <Link to="/update-profile" className="update-profile">Uredi profil</Link>
+                                    <Link to="/update-profile" className="update-profile-button">Uredi profil</Link>
                                     <button onClick={handleLogout}>Odjavi se</button>
                                 </>
                                 : <></>

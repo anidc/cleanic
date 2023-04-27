@@ -4,6 +4,7 @@ $blue3: #0FBEEC;
 
 nav {
     width: 80%;
+    padding: 0 15px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -64,6 +65,9 @@ nav {
             border-radius: 10px;
             transition: 0.3s all;
             margin-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .link {
                 color: #fff;
@@ -73,5 +77,30 @@ nav {
                 background-color: lighten($color: #3A5BC5, $amount: 10);
             }
         }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    nav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo-link {
+        font-size: 1.7rem;
+        margin-right: 0 !important;
+    }
+
+    .middle-links {
+        display: none;
+    }
+
+    nav .nav-links ul li {
+        padding: 7px 10px;
+    }
+
+    .link {
+        font-size: 0.8rem;
     }
 }

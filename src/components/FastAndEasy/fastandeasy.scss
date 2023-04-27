@@ -15,6 +15,8 @@
     .cards {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0 20px;
 
         .card-step {
             width: 250px;
@@ -28,6 +30,26 @@
 
             .fast-easy-card-text {
                 color: #706f7b;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .fast-and-easy {
+        .fast-easy-heading {
+            max-width: 450px;
+            margin: 1rem auto 2.5rem auto;
+        }
+
+        .cards {
+            flex-direction: column;
+            align-items: center;
+
+            .card-step {
+                width: auto;
+                max-width: 400px;
+                margin-bottom: 3rem;
             }
         }
     }

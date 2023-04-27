@@ -1,10 +1,11 @@
 main {
-    width: 70%;
+    max-width: 1300px;
+    padding: 0 20px;
     margin: auto;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     display: flex;
     align-items: center;
-
+    margin-bottom: 2rem;
 
     .left-main {
         max-width: 50rem;
@@ -13,6 +14,7 @@ main {
         h3 {
             color: #010103;
             font-size: 1.6rem;
+            margin-bottom: 1rem;
         }
 
         h1 {
@@ -22,6 +24,19 @@ main {
 
         p {
             color: #706f7b;
+            margin: 1rem 0;
+            line-height: 1.5;
+        }
+
+        .left-main-button-link {
+            text-decoration: none;
+        }
+
+        .left-main-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            margin-top: 2rem;
         }
     }
 
@@ -91,6 +106,49 @@ main {
             &:hover {
                 box-shadow: 0 10px 15px rgba(58, 91, 197, .55);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        transition: 0.3s all;
+
+        .left-main {
+            max-width: 40rem;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        justify-content: center;
+
+        .right-main {
+
+            img {
+                display: none;
+            }
+        }
+
+        .left-main {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
     }
 }
