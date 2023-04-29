@@ -12,6 +12,7 @@ import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import Footer from './components/Footer/Footer';
 import Search from './pages/Search/Search';
 import Aboutus from './pages/Aboutus/Aboutus';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Navigation />
+        <ScrollToTop />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

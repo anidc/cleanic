@@ -2,18 +2,22 @@ import { useAuth } from "../../contexts/AuthContext";
 import "./profile.scss"
 import profilePic from "../../images/profile-pic.jpg"
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
+// import { useHistory } from "react-router-dom";
 
 
 const Profile = () => {
     const { uid } = useParams()
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
-    const navigate = useNavigate();
     const [user, setUser] = useState(null)
+    const navigate = useNavigate();
 
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [navigate])
 
     useEffect(() => {
         const getUserData = async () => {

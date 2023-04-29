@@ -86,3 +86,32 @@ footer {
     opacity: 0.1;
     z-index: -3;
 }
+
+
+@media screen and (max-width: 800px) {
+    footer {
+
+        .footer-wrapper {
+            flex-direction: column;
+            padding: 0 20px;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            .footer-content.logo-quote {
+                width: 100%;
+            }
+
+            .footer-content {
+                margin-bottom: 2rem;
+
+                .footer-content-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .above-footer-section {
+        font-size: 1.5rem;
+    }
+}
