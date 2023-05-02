@@ -8,7 +8,7 @@ const Navigation = () => {
         <nav>
             <div className="logo-div">
                 <Link className="logo-link" to="/">Clean<span>ic</span></Link>
-                <div className="nav-links">
+                <div className="nav-links middle-links">
                     <ul>
                         <li><Link className="link" to="/">Home</Link></li>
                         <li><Link className="link" to="/search">Cleanic-eri</Link></li>

@@ -1,5 +1,5 @@
 .profile-page {
-    min-height: 100vh;
+    min-height: 80vh;
 
     .profile-wrapper {
         width: 70%;
@@ -63,35 +63,39 @@
 
                 h3 {
                     font-weight: 500;
+                    padding: 1rem 0;
                 }
             }
 
             .right-profile {
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content: space-between;
                 align-items: end;
                 width: 200px;
 
-                .update-profile {
+                .update-profile-button {
                     text-decoration: none;
                     text-align: center;
                     padding: 0.5rem 1rem;
                     margin: 0;
                     font-size: 14px;
                     background-color: #fff;
-                    border: 1px solid #18bd1277;
+                    border: 1px solid #585858;
                     border-radius: 0.5rem;
-                    color: #18bd12;
-                    width: 120%;
-                    // box-shadow: 0 10px 15px #84202A59;
+                    // color: #18bd12;
+                    color: #585858;
+                    width: 70%;
+                    height: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     cursor: pointer;
                     transition: 0.5s all;
 
                     &:hover {
                         color: #fff;
-                        background-color: #18bd12a2;
-                        // box-shadow: 0 10px 15px #18bd1262;
+                        background-color: #585858;
                     }
                 }
 
@@ -113,6 +117,62 @@
                         background-color: #d10015;
                         box-shadow: 0 10px 15px #d1001562;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .profile-page .profile-wrapper {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+
+        .gradient-profile {
+            border-radius: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .profile-page .profile-wrapper {
+
+
+        .content-profile {
+            flex-direction: column;
+
+            .left-profile {
+                width: 100%;
+                align-items: center;
+
+                .profile-info {
+                    width: 100%;
+                    text-align: start;
+
+                    h3,
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .mid-profile {
+                width: 100%;
+            }
+
+            .right-profile {
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 3rem;
+
+                .update-profile-button {
+                    width: 100%;
+                }
+
+                button {
+                    width: 100%;
                 }
             }
         }

@@ -46,3 +46,35 @@
     color: #706f7b;
     opacity: 0.5;
 }
+
+
+@media screen and (max-width: 900px) {
+    .update-profile {
+        max-width: 100%;
+
+        form {
+            box-shadow: none;
+            padding-top: 0;
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+
+            .info-fields {
+                flex-direction: column;
+
+                select {
+                    margin-top: 0;
+                }
+
+                .left-side,
+                .right-side,
+                .mid-side {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

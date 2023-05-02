@@ -2,18 +2,22 @@ import { useAuth } from "../../contexts/AuthContext";
 import "./profile.scss"
 import profilePic from "../../images/profile-pic.jpg"
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
+// import { useHistory } from "react-router-dom";
 
 
 const Profile = () => {
     const { uid } = useParams()
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
-    const navigate = useNavigate();
     const [user, setUser] = useState(null)
+    const navigate = useNavigate();
 
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [navigate])
 
     useEffect(() => {
         const getUserData = async () => {
@@ -52,22 +56,21 @@ const Profile = () => {
                             <h3>{user?.name} {user?.surname}</h3>
                             <p>{user?.location}</p>
                             <p>Cijena po m2: <strong>{user?.price}KM</strong></p>
-                            {user && user.phone ? (
-                                <p>Telefon: {user.phone}</p>
-                            ) : (
-                                <p>Telefon: Nije unešen!</p>
-                            )
-                            }
                         </div>
                     </div>
                     <div className="mid-profile">
                         <h3>O korisniku:</h3>
+                        {user && user.phone ? (
+                            <p className="phone-number">Telefon: {user.phone}</p>
+                        ) : (
+                            <p className="phone-number">Telefon: Nije unešen!</p>
+                        )
+                        }
                         {
                             user && user.about ? (
                                 <p>blabla</p>
                             ) : (
                                 <>
-                                    <br />
                                     <p>Korisnik nije unio više o sebi!</p>
                                 </>
                             )
@@ -77,7 +80,7 @@ const Profile = () => {
                         {
                             currentUser && uid === currentUser.uid ?
                                 <>
-                                    <Link to="/update-profile" className="update-profile">Uredi profil</Link>
+                                    <Link to="/update-profile" className="update-profile-button">Uredi profil</Link>
                                     <button onClick={handleLogout}>Odjavi se</button>
                                 </>
                                 : <></>

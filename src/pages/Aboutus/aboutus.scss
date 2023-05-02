@@ -10,7 +10,7 @@
         left: 0;
         right: 0;
         height: 30rem;
-        background-image: url("../../images/disinfecting-home.jpg");
+        background-image: url("../../images/zoger-can.jpg");
         background-size: cover;
         z-index: -2;
     }
@@ -36,12 +36,14 @@
 
 
 .aboutus-wrapper {
-    width: 70%;
+    min-width: 70%;
     margin: 5rem auto;
 
     .aboutus-top {
         display: flex;
         justify-content: center;
+        // min-width: 1070px;
+        flex-wrap: wrap;
 
         .aboutus-text {
             width: 500px;
@@ -106,4 +108,55 @@
         }
     }
 
+}
+
+@media screen and (max-width: 1080px) {
+    .aboutus-wrapper {
+        .aboutus-top {
+            width: 100%;
+            flex-direction: column-reverse;
+
+            .aboutus-text {
+                width: 85%;
+                margin: auto;
+            }
+
+            .aboutus-image-container {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .aboutus-wrapper {
+        width: 100%;
+        margin-top: 1rem;
+
+        .aboutus-top {
+            flex-direction: column-reverse;
+            margin-bottom: 3rem;
+
+            .aboutus-text {
+                padding: 0.5rem 1rem;
+                margin: 0;
+                width: 100%;
+
+                .aboutus-text-subheading {
+                    margin-bottom: 1rem;
+                }
+
+                .aboutus-text-heading {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .aboutus-image-container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 10px;
+            }
+        }
+    }
 }

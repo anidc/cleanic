@@ -8,7 +8,7 @@ const Footer = () => {
         <>
             <section className="above-footer-section">
                 Osvježite svoj dom uz nas!
-                <Mirror className="mirror-svg" />
+                {/* <Mirror className="mirror-svg" /> */}
             </section>
             <footer>
                 <div className="footer-wrapper">
