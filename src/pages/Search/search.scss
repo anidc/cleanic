@@ -1,10 +1,12 @@
 .search-wrapper {
-    width: 85%;
+    width: 100%;
+    padding: 0 5rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 100px);
     background-color: #f8f8f8;
+    padding-bottom: 3rem;
 
     .search-sort {
         display: flex;
@@ -128,10 +130,59 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
     .search-wrapper {
         width: 100%;
         padding: 0 1rem;
+        padding-bottom: 3rem;
+
+        .search-sort {
+            align-items: flex-end;
+            margin: 0.5rem 0;
+        }
+
+        .search-content {
+            flex-direction: column;
+
+            .filters {
+                width: 100%;
+                align-items: flex-start;
+
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    select,
+                    button {
+                        margin: 0;
+                        width: 32%;
+
+                    }
+
+                }
+            }
+
+            .card-wrapper.loading {
+                height: 20vh;
+            }
+
+            .card-wrapper {
+                margin-top: 2rem;
+                width: 100%;
+                justify-content: space-evenly;
+
+                .card {
+                    width: 47%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .search-wrapper {
 
         .search-sort {
             margin: 0.5rem 0;
@@ -144,7 +195,7 @@
             .filters {
                 width: 100%;
                 margin-bottom: 1rem;
-                padding: 25px 50px;
+                padding: 25px;
 
                 h2 {
                     margin-bottom: 0.5rem;
@@ -161,12 +212,8 @@
                 }
             }
 
-            .card-wrapper.loading {
-                height: 20vh;
-            }
-
             .card-wrapper {
-                width: 100%;
+                margin-top: 0;
 
                 .card {
                     width: 100%;

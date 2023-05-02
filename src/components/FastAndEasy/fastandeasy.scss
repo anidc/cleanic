@@ -1,6 +1,8 @@
 .fast-and-easy {
     text-align: center;
     color: #010103;
+    max-width: 1300px;
+    margin: auto;
 
     .fast-easy-subheading {
         font-size: 1.5rem;
@@ -20,6 +22,7 @@
 
         .card-step {
             width: 250px;
+            margin: 0 3rem;
 
             .fast-easy-card-heading {
                 font-size: 1.3rem;

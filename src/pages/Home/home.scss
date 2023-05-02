@@ -110,6 +110,13 @@ main {
     }
 }
 
+.background-home-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
+}
+
 @media screen and (max-width: 1200px) {
     main {
         transition: 0.3s all;
@@ -167,5 +174,9 @@ main {
                 font-size: 0.9rem;
             }
         }
+    }
+
+    .background-home-image {
+        display: none;
     }
 }

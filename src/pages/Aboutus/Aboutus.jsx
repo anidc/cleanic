@@ -1,5 +1,5 @@
 import FastAndEasy from "../../components/FastAndEasy/FastAndEasy";
-import image from "../../images/women-cleaning-window.jpg"
+import image from "../../images/window-cleaning.jpg"
 import cities from "../../images/cities.png"
 import outfit from "../../images/worker.png"
 import users from "../../images/users.png"

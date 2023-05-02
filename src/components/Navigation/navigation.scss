@@ -46,6 +46,9 @@ nav {
             text-decoration: none;
             color: #333;
             transition: 0.5s all;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             &:hover {
                 color: #3A5BC5;
